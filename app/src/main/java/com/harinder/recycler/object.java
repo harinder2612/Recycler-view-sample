@@ -6,12 +6,18 @@ package com.harinder.recycler;
 
 public class object {
     private String name;
+    int col;
 
-    public object(String name) {
+    public object(String name, int col) {
         this.name = name;
+        this.col=col;
     }
 
     public String getName() {
         return name;
+    }
+
+    public int getCol() {
+        return col;
     }
 }

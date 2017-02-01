@@ -4,26 +4,43 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="210dp">
+    android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_gravity="center"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        card_view:cardCornerRadius="4dp"
-        android:elevation="15dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="0dp"
+        android:clipToPadding="false"
+        android:elevation="5dp"
+        card_view:cardUseCompatPadding="false"
+        card_view:paddingEnd="0dp"
+        card_view:paddingStart="0dp"
+        card_view:cardBackgroundColor="#00A8FF">
 
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:layout_marginTop="70dp"
             tools:text="harinder"
-            android:textSize="25dp"
+            android:textSize="35dp"
             android:gravity="center"
+            android:textColor="#232323"
             android:layout_gravity="center"
             />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_above="@id/name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/card_shadow" />
     </android.support.v7.widget.CardView>
 
 
