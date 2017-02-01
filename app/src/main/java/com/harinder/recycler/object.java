@@ -6,11 +6,12 @@ package com.harinder.recycler;
 
 public class object {
     private String name;
-    int col;
+    int col,imgrs;
 
-    public object(String name, int col) {
+    public object(String name, int col, int imgrs) {
         this.name = name;
         this.col=col;
+        this.imgrs=imgrs;
     }
 
     public String getName() {
@@ -19,5 +20,9 @@ public class object {
 
     public int getCol() {
         return col;
+    }
+
+    public int getImgrs() {
+        return imgrs;
     }
 }

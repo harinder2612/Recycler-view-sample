@@ -1,11 +1,13 @@
 package com.harinder.recycler;
 
+import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +38,7 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
      object ob=pArray.get(position);
         holder.t1.setText(ob.getName());
         holder.cardView.setCardBackgroundColor(ob.getCol());
+        holder.img.setImageResource(ob.getImgrs());
         Log.d("color_report", "onBindViewHolder: "+ob.getCol());
     }
 
@@ -51,10 +54,12 @@ public class adapter extends RecyclerView.Adapter<adapter.MyViewHolder> {
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         private TextView t1;
         CardView cardView;
+        ImageView img;
         public MyViewHolder(View itemView) {
             super(itemView);
             t1= (TextView) itemView.findViewById(R.id.name);
             cardView= (CardView) itemView.findViewById(R.id.card_view);
+            img= (ImageView) itemView.findViewById(R.id.img);
         }
     }
 }
